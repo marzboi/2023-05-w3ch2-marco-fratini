@@ -5,9 +5,12 @@ import { Swordsman } from '../data/swordsman';
 import { Component } from './component';
 
 export class Character extends Component {
-  constructor(selector: string) {
+  constructor(
+    selector: string,
+    character: King | Squire | Kingshand | Swordsman
+  ) {
     super(selector);
-    this.template = this.createTemplate();
+    this.template = this.createTemplate(character);
     this.render();
   }
 
@@ -21,7 +24,7 @@ export class Character extends Component {
 
       if ('supports' in character) {
         return `
-         <li>Asesora a: ${character.supports}</li>
+         <li>Asesora a: ${character.supports.name}</li>
         `;
       }
 
@@ -43,12 +46,16 @@ export class Character extends Component {
     return `
       <li class="character col">
         <div class="card character__card">
-          <img src="img/no-one.jpg" alt="Nombre y familia del personaje" class="character__picture card-img-top" />
+          <img src="img/${character.name.toLowerCase()}.jpg" alt="${
+      character.name
+    } ${character.family}" class="character__picture card-img-top" />
           <div class="card-body">
-            <h2 class="character__name card-title h4">Nombre y familia</h2>
+            <h2 class="character__name card-title h4">${character.name} ${
+      character.family
+    }</h2>
             <div class="character__info">
               <ul class="list-unstyled">
-                <li>Edad: X años</li>
+                <li>Edad: ${character.age}</li>
                 <li>
                   Estado:
                   <i class="fas fa-thumbs-down"></i>

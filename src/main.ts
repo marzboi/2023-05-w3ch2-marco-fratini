@@ -10,5 +10,8 @@ const characterList = createCharacterList();
 console.log(characterList);
 
 new List('.app');
-new Character('.characters-list');
+characterList.forEach((item) => {
+  new Character('.characters-list', item);
+});
+
 new Comunication('body');
