@@ -4,7 +4,7 @@ import {
   kingshandTemplate,
   squireTemplate,
   swordsmanTemplate,
-} from './charactersTemplate.ts';
+} from './component/charactersTemplate.ts';
 import './style.css';
 
 const characterList: any = createCharacterList();
