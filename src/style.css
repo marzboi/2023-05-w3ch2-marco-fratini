@@ -100,3 +100,7 @@ body {
   right: 5px;
   top: 5px;
 }
+
+.hidden {
+  display: none;
+}
