@@ -7,10 +7,11 @@ export abstract class Component {
     this.selector = selector;
   }
 
-  render() {
+  // eslint-disable-next-line no-undef
+  render(position: InsertPosition = 'beforeend') {
     const element = document.querySelector(this.selector);
     if (!element) throw new Error('Selector not found');
     this.element = element;
-    this.element.innerHTML = this.template;
+    this.element.insertAdjacentHTML(position, this.template);
   }
 }
