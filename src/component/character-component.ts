@@ -15,7 +15,9 @@ export class Character extends Component {
   }
 
   createTemplate(character: King | Squire | Kingshand | Swordsman) {
-    const filterCharacters = (character: any) => {
+    const filterCharacters = (
+      character: King | Squire | Kingshand | Swordsman
+    ) => {
       if ('reignLength' in character) {
         return `
          <li>Años de reinado: ${character.reignLength}</li>
@@ -68,8 +70,12 @@ export class Character extends Component {
               ${filterCharacters(character)}
               </ul>
               <div class="character__actions">
-                <button class="character__action btn">habla</button>
-                <button class="character__action btn">muere</button>
+                <button data-id="${
+                  character.name
+                }" class="character__action btn talk">habla</button>
+                <button data-id="${
+                  character.name
+                }" class="character__action btn die">muere</button>
               </div>
             </div>
           </div>
