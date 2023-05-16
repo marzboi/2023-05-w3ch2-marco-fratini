@@ -3,16 +3,16 @@ import { King } from './king.ts';
 import { Swordsman } from './swordsman.ts';
 
 export class Kingshand extends Character {
-  support;
+  supports;
   warcry;
   constructor(
     name: string,
     family: string,
     age: number,
-    support: Swordsman | King
+    supports: Swordsman | King
   ) {
     super(name, family, age);
-    this.support = support;
+    this.supports = supports;
     this.warcry = "I don't know why, but I think I will die soon";
   }
 }

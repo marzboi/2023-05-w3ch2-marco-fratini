@@ -1,3 +1,7 @@
+import { King } from '../data/king';
+import { Kingshand } from '../data/kingshand';
+import { Squire } from '../data/squire';
+import { Swordsman } from '../data/swordsman';
 import { Component } from './component';
 
 export class Character extends Component {
@@ -7,7 +11,35 @@ export class Character extends Component {
     this.render();
   }
 
-  createTemplate() {
+  createTemplate(character: King | Squire | Kingshand | Swordsman) {
+    const filterCharacters = (character: any) => {
+      if ('reignLength' in character) {
+        return `
+         <li>Años de reinado: ${character.reignLength}</li>
+        `;
+      }
+
+      if ('supports' in character) {
+        return `
+         <li>Asesora a: ${character.supports}</li>
+        `;
+      }
+
+      if ('pelotismo' in character) {
+        return `
+          <li>Peloteo: ${character.pelotismo}</li>
+          <li>Sirve a: ${character.support.name}</li>
+        `;
+      }
+
+      if ('weapon' in character) {
+        return `
+        <li>Arma: ${character.weapon}</li>
+        <li>Destreza: ${character.dexterity}</li>
+        `;
+      }
+    };
+
     return `
       <li class="character col">
         <div class="card character__card">
@@ -26,12 +58,7 @@ export class Character extends Component {
             </div>
             <div class="character__overlay">
               <ul class="list-unstyled">
-                <li>Años de reinado: X</li>
-                <li>Arma: XXX</li>
-                <li>Destreza: X</li>
-                <li>Peloteo: X</li>
-                <li>Asesora a: X</li>
-                <li>Sirve a: X</li>
+              ${filterCharacters(character)}
               </ul>
               <div class="character__actions">
                 <button class="character__action btn">habla</button>
