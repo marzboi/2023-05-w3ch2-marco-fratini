@@ -21,6 +21,10 @@ body {
   object-position: top;
   height: 200px;
 }
+
+.dead {
+  scale: -1;
+}
 .character__card {
   position: relative;
   border: none;

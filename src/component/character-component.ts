@@ -50,7 +50,9 @@ export class Character extends Component {
         <div class="card character__card">
           <img src="img/${character.name.toLowerCase()}.jpg" alt="${
       character.name
-    } ${character.family}" class="character__picture card-img-top" />
+    } ${character.family}" class="character__picture card-img-top ${
+      character.name
+    }" />
           <div class="card-body">
             <h2 class="character__name card-title h4">${character.name} ${
       character.family

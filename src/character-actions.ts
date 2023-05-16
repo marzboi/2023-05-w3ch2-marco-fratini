@@ -13,6 +13,10 @@ export const killCharacter = (
   );
   if (character) {
     character.alive = false;
+    const picture = document.querySelector(`.${character.name}`) as Element;
+    if (picture) {
+      picture.classList.add('dead');
+    }
   }
 };
 
@@ -25,7 +29,7 @@ export const makeCharacterSpeak = (
   const character = characters.find(
     (item: King | Squire | Kingshand | Swordsman) => item.name === characterId
   );
-  if (character && textBox instanceof HTMLElement) {
-    textBox.textContent = character.name;
+  if (character && character.alive) {
+    textBox.textContent = character.letWarCryOut();
   }
 };
