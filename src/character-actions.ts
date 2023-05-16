@@ -14,8 +14,16 @@ export const killCharacter = (
   if (character) {
     character.alive = false;
     const picture = document.querySelector(`.${character.name}`) as Element;
+    const thumbsDown = document.querySelector(
+      `.fa-thumbs-down.${character.name}`
+    ) as Element;
+    const thumbsUp = document.querySelector(
+      `.fa-thumbs-up.${character.name}`
+    ) as Element;
     if (picture) {
       picture.classList.add('dead');
+      thumbsDown.classList.remove('hidden');
+      thumbsUp?.classList.add('hidden');
     }
   }
 };

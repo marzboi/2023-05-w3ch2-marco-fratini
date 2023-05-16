@@ -62,8 +62,8 @@ export class Character extends Component {
                 <li>Edad: ${character.age}</li>
                 <li>
                   Estado:
-                  <i class="fas fa-thumbs-down"></i>
-                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-down ${character.name} hidden"></i>
+                  <i class="fas fa-thumbs-up ${character.name} "></i>
                 </li>
               </ul>
             </div>
