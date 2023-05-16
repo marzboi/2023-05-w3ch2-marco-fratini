@@ -22,17 +22,3 @@ const tyrion = kingshandTemplate(characterList[3]);
 const broon = squireTemplate(characterList[4]);
 
 html.innerHTML = joffrey + jamie + daenerys + tyrion + broon;
-
-const registerEventListers = () => {
-  const buttons = document.querySelectorAll('.btn');
-  const speakText = document.querySelector('.comunications__text');
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const warcry = characterList[0].letWarCryOut();
-      speakText.textContent = warcry;
-    });
-  });
-};
-
-registerEventListers();
