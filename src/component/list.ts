@@ -1,6 +1,6 @@
 import { Component } from './component';
 
-export class list extends Component {
+export class List extends Component {
   constructor(selector: string) {
     super(selector);
     this.template = this.createTemplate();

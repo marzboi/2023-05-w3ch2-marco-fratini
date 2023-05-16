@@ -1,7 +1,7 @@
 import { Component } from './component';
 
 export class Comunication extends Component {
-  constructor(selector: string) {
+  constructor(selector: string, position: string) {
     super(selector);
     this.template = this.createTemplate();
     this.render();

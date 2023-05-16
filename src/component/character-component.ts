@@ -8,10 +8,8 @@ export class Character extends Component {
   }
 
   createTemplate() {
-    const filterCharacter = () => {};
-
     return `
-          <li class="character col">
+      <li class="character col">
         <div class="card character__card">
           <img src="img/no-one.jpg" alt="Nombre y familia del personaje" class="character__picture card-img-top" />
           <div class="card-body">
@@ -28,7 +26,12 @@ export class Character extends Component {
             </div>
             <div class="character__overlay">
               <ul class="list-unstyled">
-                ${filterCharacter()}
+                <li>Años de reinado: X</li>
+                <li>Arma: XXX</li>
+                <li>Destreza: X</li>
+                <li>Peloteo: X</li>
+                <li>Asesora a: X</li>
+                <li>Sirve a: X</li>
               </ul>
               <div class="character__actions">
                 <button class="character__action btn">habla</button>
