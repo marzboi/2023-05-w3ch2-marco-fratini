@@ -7,6 +7,7 @@ import './style.css';
 import { Comunication } from './component/comunication.ts';
 
 const characterList = createCharacterList();
+console.log(characterList);
 
 new List('.app');
 new Character('.characters-list');
