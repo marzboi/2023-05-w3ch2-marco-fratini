@@ -1,5 +1,5 @@
-import { King } from './king';
-import { Kingshand } from './kingshand';
+import { King } from '../data/king';
+import { Kingshand } from '../data/kingshand';
 import { Squire } from '../data/squire';
 import { Swordsman } from '../data/swordsman';
 
