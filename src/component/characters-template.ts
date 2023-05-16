@@ -1,7 +1,7 @@
-import { King } from './king';
-import { Kingshand } from './kingshand';
-import { Squire } from './squire';
-import { Swordsman } from './swordsman';
+import { King } from '../data/king';
+import { Kingshand } from '../data/kingshand';
+import { Squire } from '../data/squire';
+import { Swordsman } from '../data/swordsman';
 
 export const kingTemplate = (object: King) => ` <li class="character col">
         <div class="card character__card">

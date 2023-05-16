@@ -1,10 +1,10 @@
-import { createCharacterList } from './characterList.ts';
+import { createCharacterList } from './character-list.ts';
 import {
   kingTemplate,
   kingshandTemplate,
   squireTemplate,
   swordsmanTemplate,
-} from './charactersTemplate.ts';
+} from './component/characters-template.ts';
 import './style.css';
 
 const characterList: any = createCharacterList();
