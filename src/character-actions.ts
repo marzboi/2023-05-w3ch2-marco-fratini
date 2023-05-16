@@ -25,7 +25,7 @@ export const makeCharacterSpeak = (
   characters: King | Squire | Kingshand | Swordsman | any
 ) => {
   const characterId = element.dataset.id;
-  const textBox = document.querySelector('.comunications__text');
+  const textBox = document.querySelector('.comunications__text') as Element;
   const character = characters.find(
     (item: King | Squire | Kingshand | Swordsman) => item.name === characterId
   );
