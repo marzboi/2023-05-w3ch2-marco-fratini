@@ -10,4 +10,4 @@ const characterList = createCharacterList();
 
 new List('.app');
 new Character('.characters-list');
-new Comunication('.app', 'afterend');
+new Comunication('body');
