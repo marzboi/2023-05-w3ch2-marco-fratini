@@ -45,6 +45,32 @@ export class Character extends Component {
       }
     };
 
+    const addEmoji = (character: King | Squire | Kingshand | Swordsman) => {
+      if ('reignLength' in character) {
+        return `
+              👑
+        `;
+      }
+
+      if ('supports' in character) {
+        return `
+              🎓
+        `;
+      }
+
+      if ('pelotismo' in character) {
+        return `
+              🛡
+        `;
+      }
+
+      if ('weapon' in character) {
+        return `
+              🗡
+        `;
+      }
+    };
+
     return `
       <li class="character col">
         <div class="card character__card">
@@ -81,7 +107,7 @@ export class Character extends Component {
               </div>
             </div>
           </div>
-          <i class="emoji"></i>
+          <i class="emoji">${addEmoji(character)}</i>
         </div>
       </li>
     `;
